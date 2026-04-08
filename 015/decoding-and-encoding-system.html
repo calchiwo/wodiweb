@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="WodiWeb: How Text Works on the Web; Encoding, Decoding, and Why It Breaks" />
+        <title>WodiWeb: How Text Works on the Web; Encoding, Decoding and Why It Breaks</title>
+
+        <link rel="canonical" href="https://wodiweb.vercel.app/015" />
+        <link rel="icon" href="https://wodiweb.vercel.app/wodiweb.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.static.com" crossorigin/>
+
+        <meta name="author" content="Caleb Wodi" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="wodiweb.png" />
+        <meta property="og:title" content="WodiWeb: Understanding How Systems On The Web Actually Work" />
+        <meta property="og:description" content="WodiWeb: How Text Works on the Web; Encoding, Decoding and Why It Breaks" />
+        <meta property="og:url" content="https://wodiweb.vercel.app"/>
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="wodiweb.png" />
+        <meta name="twitter:title" content="WodiWeb: Understanding How Systems On The Web Actually Work" />
+        <meta name="twitter:description" content="WodiWeb: How Text Works on the Web; Encoding, Decoding and Why It Breaks" />
+        <meta name="twitter:creator" content="@calchiwo"/>
+    </head>
+    <body>
+        <div>
+            <section>
+                <h1>WodiWeb: <u>How Text Works on the Web; Encoding, Decoding, and Why It Breaks</u></h1>
+                <p><strong>Encoding</strong> is converting human-readbale characters into bytes</p>
+                <blockquote>Think: English → numbers</blockquote><br>
+                <p>Where as, <strong>Decoding</strong> is converting bytes back into numbers</p>
+                <blockquote>Think: numbers → English</blockquote><br>
+                <p><strong>When you write code:</strong></p><br>
+                <p>You type:</p>
+                <pre><code>Hello</code></pre><br>
+                <p>Your editor encodes it into bytes and stores it on disk</p><br>
+                <p><strong>When the browser reads the file:</strong></p>
+                <p>It reads bytes like:</p>
+                <pre><code>72 101 108 108 111</code></pre><br>
+                <p>Then decodes them back and shows:</p>
+                </pre><code>Hello</code></pre><br>
+                <h2>What exactly is really UTF-8?</h2>
+                <p>UTF-8 is a rule book that defines how characters (represented as Unicode numbers or code points) encode into bytes stored in the disk in the writing phase (<i>by the editor</i>) and how the bytes stored in the disk decode into characters in the reading phase (<i>by the browser</i>).</p>
+                <p>Simply put, UTF-8 is a rulebook that defines how Unicode code points are encoded into bytes and decoded back into characters.</p>
+                <p>It uses 8-bit units (bytes) and uses between 1 and 4 bytes per character.</p><br>
+                <h3>Important idea</h3>
+                <p>Computers store bytes. What we see as <strong>"characters"</strong> are just interpretations of those bytes the computer stores</p><br>
+                <h3>How does the browser know how to decode?</h3>
+                <p>That’s what this does:</p>
+                <pre><code><meta charset="UTF-8" ></code></pre>
+                <p>It tells the browser which encoding to use.</p>
+                <p>The same bytes decoded with a different encoding can produce completely different text</p>
+                <pre><code>
+Bytes: 195 169
+
+UTF-8 → é
+Windows-1252 → Ã©
+                </code></pre><br>
+                <h3>What if charset is removed?</h3>
+                <p>The browser falls back to a decision chain:</p>
+                <ol>
+                    <li>HTTP headers</li>
+                    <li>Byte Order Mark (BOM)</li>
+                    <li>Guessing</li>
+                    <li>Default encoding</li>
+                </ol>
+                <p>This can lead to incorrect text rendering and inconsistent results across browsers and systems</p>
+                <h3>Where ASCII, Unicode, and UTF-8 fit</h3>
+                <ul>
+                    <li><strong>ASCII</strong> said "let us assign numbers to a small set of characters"</li>
+                    <li><strong>Unicode</strong> came and said "let us assign numbers to ALL characters globally"</li>
+                    <li><strong>UTF-8</strong> said "let us define how those numbers (assigned to characters i.e. Unicode numbers) encode into one or more bytes (each byte is 8 bits)"</li>
+                </ul>
+                <h4>Humans and engineers were the ones who assigned numbers to characters.</h4>
+                <h5>And these assignments are called encoding standards:</h5>
+                <ul>
+                    <li>Character encoding (Unicode) → assigns numbers</li>
+                    <li>Encoding format (UTF-8) → turns numbers into bytes</li>
+                </ul>
+                <h3>Bits and Bytes</h3>
+                <ul>
+                    <li>A bit is a 0 or 1</li>
+                    <li>A byte is 8 bits</li>
+                    <li>A byte can represent values from 0 to 255</li>
+                </ul>
+                <h3>Final idea</h3>
+                <ul>
+                    <li>Files are stored as bytes.</li>
+                    <li>Meaning comes from how those bytes are decoded.</li>
+                </ul>
+                <p>These are my own way I use to understand charset, UTF-8, Unicode, ASCII, encoding, decoding, bytes, bits, standards</p>
+                <p>And if you found this breakdown helpful...</p>
+                <p>I’m documenting my understanding of how systems on the web actually work: <a href="https://github.com/calchiwo/WodiWeb" title="Understanding How Systems On The Web Actually Work" alt="Understanding How Systems On The Web Actually Work">WodiWeb</a><p>
+            </section>
+        </div>
+    </body>
+</html>

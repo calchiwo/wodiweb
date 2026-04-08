@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initail-scale=1.0" />
+        
+        <title>My web mastery</title>
+        
+        <meta name="description" content="I'm learning the web language properly and I'm focusing on the meta tags"/>
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://github.com/calchiwo/learning-the-web-properly"/>
+        <meta name="author" content="Caleb Wodi" />
+
+        <meta property="og:title" content="Learning programming properly"/>
+        <meta property="og:description" content="Learning programming properly by Caleb Wodi"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://calchiwo.github.io/learning-the-web-properly/"/>
+        <meta property="og:image" content="02-26-2026.png" />
+
+        <meta name="twitter:cards" content="summary_large_iamge" />
+        <meta name="twitter:title" content="Learning The Web Properly" />
+        <mata name="twitter:description" content="Hey, my name is Caleb Wodi and I program and ship software products used my people" />
+        <meta name="twitter:creator" content="@calchiwo"/>
+        <meta name="twitter:image" contnet="02-26-2026.png" />
+
+        <meta name="google-site-verification" content="..." />
+
+        <link rel="icon" href="02-26-2026.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+        <link rel="stylesheet" href="styles.css"></link>
+    </head>
+    <body class="whole-body">
+        <h1 class="a-head">The meta tags</h1>
+        <p>Meta elements only have a starting tag</p>
+        <p>There are two types of meta tags</p>
+        <h2 class="b-head">name</h2>
+        <h3 class="c-head">Used by:</h3>
+        <p>- browsers</p>
+        <p>- search engine</p>
+        <p>- general tools</p>
+        <h2 class="b-head">property</h2>
+        <h3 class="c-head">Used by:</h3>
+        <p>Open graph (twitter, whatsapp, linkedin)</p>
+        <h4 class="d-head">I personally think that meta tags shouldn't be grouped by how they look, but by <b>who is reading them</b>. because each meta tags is written for a specific reader</h4>
+        <p><b>Examples</b></p>
+        <p>- Browser</p>
+        <p>- Google</p>
+        <p>- Twitter bot</p>
+        <p>- WhatsApp preview bot</p>
+        
+        <h2 class="chead2">7 buckets (7 systems)</h2>
+        
+        <h3 class="each-subhead">A. Rendering control (Browser behavior)</h3>
+        <p>These affect how the page behaves on the device</p>
+        <pre><code> < meta name="viewport" content="witdth=device-witdth, initial-scale=1.0"/></code></pre>
+        <p class="mental-model"><b>Mental model:</b></p>
+        <p>How should this page physically appear on the screen</p>
+
+        <h3 class="each-subhead">B. Search Engine System (how Google sees you) </h3>
+        <p>These talk to Google</p>
+        <pre><code>< meta name="description" content="A description here" /> </code></pre>
+        <pre><code>< meta name="robots" content="index, follow" /></code></pre>
+        <pre><code>< meta name="googlebot" content="index, follow" /></code></pre>
+        <pre><code>< link rel="canonical" href="github.com/calchiwo/learning-the-web-properly" /> </code></pre>
+        <pre><code>< title>A title here< /title ></code></pre>
+
+        <p class="mental-model"><b>Mental model:</b></p>
+        <p><em>If Google shows this page, what should it say about it?</p>
+        <p>If Google lists this in search results, how should it present and treat it?</em></p>
+
+        <h3 class="each-subhead">C. Social link preview system </h3>
+        <p>This control link previews and how your site looks when shared on platforms like WhatsApp, Linkedin, Twitter</p>
+
+        <p><b>Open graph (OG)</b></p>
+        <pre><code>< meta property="og:url" content="https://site-name.com" /> </pre></code>
+        <pre><code>< meta property="og:type" content="website" /></pre></code>
+        <pre><code>< meta property="og:title" content="A title here" /></pre></code>
+        <pre><code>< meta property="og:description" content="A description" /></pre></code>
+        <pre><code>< meta property="og:image" content="image-name.png"</pre></code>
+
+        <p><b>Twitter tags</b></p>
+        <pre><code>< meta name="twitter:image" content="https://site-name.com/image-name.png" /></pre></code>
+        <pre><code>< meta name="twitter:card" content="summary_large_image" /></pre></code>
+        <pre><code>< meta name="twitter:title" content="A title here" /></pre></code>
+        <pre><code>< meta name="twitter:description" content="A description here" /></pre></code>
+        <pre><code>< meta name="twitter:creator" content="@username"</pre></code>
+        <p>Note:</p>
+        <p>The title/description should match the OG for consistency</p>
+        <p class="mental-model"><b>Mental model</p></b>
+        <p><em>When my link travels, how does it sell itself?</em></p>
+
+        <h3 class="each-subhead">D. Identity + Ownership system</h3>
+        <p>This Identify creator and prove ownership to platforms</p>
+        <pre><code>< meta name="author" content="..." /></pre></code>
+        <pre><code>< meta name="google-site-verfication" content="..." /></pre></code>
+
+        <p class="mental-model"><b>Mental model</b></p>
+        <p><em> Who owns this and can prove this and can prove it?</em></p>
+
+        <h3 class="each-subhead">E. Favicon + Branding system</h3>
+        <p>The job is to set tab icon</p>
+        <pre><code>< meta name="icon" href="image.png" /></pre></code>
+        <p>It's usually .ico or .png</p> 
+        <p class="mental-model"><b>Mental model</b></p>
+        <p><em>What does the user sees in the brower chrome?</em></p>
+
+        <h3 class="each-subhead">F. Performance and resource system (preconnect)</h3>
+        <p>This speeeds things up</p>
+        <p>And reduce latency when loding fonts</p>
+        <pre><code>< link rel="preconnect" href="https://fonts.googleapis.com" /></pre></code>
+        <pre><code>< link rel="preconnect" href="https://fonts.gstatic.com" / crossorigin></pre></code>
+        <p class="mental-model"><b>Mental model</b></p>
+        <blockquote><em>Start connecting before I actually need it</blockquote>
+        <blockquote>Prepare resources early to reduce waiting time</em></blockquote>
+
+        <h3 class="each-subhead">G. Decoding system (UTF-8, charset)</h3>
+        <p>This decodes HTML file into characters</p>
+        <p>UTF-8 is a rulebook that defines how characters turn (encode) into bytes stored in the disk in the writing phase (by the editor) and how the bytes stored in the disk turn (decode) into characters in the reading phase (by the browser) </p>
+
+        <p class="mental-model"><b>Mental model</p></b>
+        <p><em></em></p>
+        <br><b> Hey, my name is <b>Caleb Wodi</b>, I program and ship open source software products with real users. I'm currently learning and improving my fundamentals in Python, Rust, C, C++ and Go. I'm actively building <a href="https://github.com/calchiwo" alt="Caleb's projects" target="_blank">projects</a> while teaching myself coding everyday. It's fun!</b></br>
+        <p><b>And.. this is me :)</b></p>
+        <img src="02-26-2026.png" alt="This is Caleb Wodi" />
+    </body>
+</html>

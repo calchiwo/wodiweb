@@ -1,0 +1,24 @@
+.a-head {
+    color: green
+}
+.whole-body {
+    background-color: pink
+}
+.b-head {
+    color: brown; font: 10px
+}
+.c-head {
+    color: blue; font: 10px
+}
+.d-head {
+    color: green
+}
+.chead2 {
+    color: rgb(220, 13, 13)
+}
+.each-subhead {
+    color: rgb(127, 127, 192)
+}
+.mental-model {
+    color: purple
+}
